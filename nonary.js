@@ -22,6 +22,18 @@ var NONARY_TO_BTS = {
   4:'11',
 };
 
+var BTS_TO_NONARY = {
+  'ii': 'm',
+  'i0': 'k',
+  'i1': 'j',
+  '0i': 'i',
+  '00': '0',
+  '01': '1',
+  '1i': '2',
+  '10': '3',
+  '11': '4',
+};
+
 function nonary2bts(ns, sep) {
   if (sep === undefined) sep = '';
 
@@ -39,9 +51,27 @@ function nonary2bts(ns, sep) {
   return bt;
 }
 
-// TODO: bts2nonary, group right-to-left
+function bts2nonary(bt) {
+  var i = bt.length;
+  var ns = '';
+  do {
+    var c1 = bt.charAt(--i);
+    var c2 = bt.charAt(--i);
+    if (c2 === '') c2 = '0'; // if incomplete digit pair, charAt out of range
+
+    var digit = BTS_TO_NONARY[c2 + c1];
+    if (digit === undefined) throw new Error('bts2nonary('+bt+'): invalid balanced ternary digit pair: '+c2+c1);
+
+    ns = digit + ns;
+
+    console.log(i,c2+c1);
+  } while(i > 0);
+
+  return ns;
+}
 
 module.exports = {
   nonary2bts: nonary2bts,
+  bts2nonary: bts2nonary,
 };
 
