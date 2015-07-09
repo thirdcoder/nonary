@@ -1,0 +1,25 @@
+{
+  "name": "nonary",
+  "description": "base 9 / base 3",
+  "version": "0.0.1",
+  "main": "nonary.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:/nonary.git"
+  },
+  "keywords": [
+    "ternary",
+    "base3",
+    "base9",
+    "nonary",
+    "math"
+  ],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "tape": "^4.0.0"
+  }
+}
