@@ -9,32 +9,33 @@
 //  00  0
 var NONARY_TO_BTS = {
   // negative digits TODO: these are too wide in some fonts, alternatives? https://en.wikipedia.org/wiki/Numerals_in_Unicode
-  m:'ii', '④':'ii', // U+2463 circled digit four
-  k:'i0', '③':'i0', // U+2462 circled digit three
-  j:'i1', '②':'i1', // U+2461 circled digit two
-  i:'0i', '①':'0i', // U+2460 circled digit one
+  z:'ii', m:'ii', '④':'ii', // U+2463 circled digit four
+  y:'i0', k:'i0', '③':'i0', // U+2462 circled digit three
+  x:'i1', j:'i1', '②':'i1', // U+2461 circled digit two
+  w:'01', i:'0i', '①':'0i', // U+2460 circled digit one
 
   0:'00',
 
   // TODO: should we use different digits for nonary to disambiguate
   // nonary strings from balanced ternary? i01 could be nonary (for: 0i 00 01) or not..
   //  (nonary_cli interprets as both, if maybe_bts)
-  1:'01',
-  2:'1i',
-  3:'10',
-  4:'11',
+  a:'01', 1:'01',
+  b:'1i', 2:'1i',
+  c:'10', 3:'10',
+  d:'11', 4:'11',
 };
 
 var BTS_TO_NONARY = {
-  'ii': 'm',
-  'i0': 'k',
-  'i1': 'j',
-  '0i': 'i',
+  // prefer non-ambiguous nonary digits
+  'ii': 'z',
+  'i0': 'y',
+  'i1': 'x',
+  '0i': 'w',
   '00': '0',
-  '01': '1',
-  '1i': '2',
-  '10': '3',
-  '11': '4',
+  '01': 'a',
+  '1i': 'b',
+  '10': 'c',
+  '11': 'd',
 };
 
 function nonary2bts(ns, sep) {
