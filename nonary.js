@@ -39,6 +39,8 @@ function nonary2bts(ns, sep) {
   return bt;
 }
 
+// TODO: bts2nonary, group right-to-left
+
 module.exports = {
   nonary2bts: nonary2bts,
 };
