@@ -16,6 +16,9 @@ var NONARY_TO_BTS = {
 
   0:'00',
 
+  // TODO: should we use different digits for nonary to disambiguate
+  // nonary strings from balanced ternary? i01 could be nonary (for: 0i 00 01) or not..
+  //  (nonary_cli interprets as both, if maybe_bts)
   1:'01',
   2:'1i',
   3:'10',
@@ -63,8 +66,6 @@ function bts2nonary(bt) {
     if (digit === undefined) throw new Error('bts2nonary('+bt+'): invalid balanced ternary digit pair: '+c2+c1);
 
     ns = digit + ns;
-
-    console.log(i,c2+c1);
   } while(i > 0);
 
   return ns;
