@@ -8,11 +8,14 @@
 //  0i -1   11 +4
 //  00  0
 var NONARY_TO_BTS = {
+  // negative digits TODO: these are too wide in some fonts, alternatives? https://en.wikipedia.org/wiki/Numerals_in_Unicode
   m:'ii', '④':'ii', // U+2463 circled digit four
   k:'i0', '③':'i0', // U+2462 circled digit three
   j:'i1', '②':'i1', // U+2461 circled digit two
   i:'0i', '①':'0i', // U+2460 circled digit one
+
   0:'00',
+
   1:'01',
   2:'1i',
   3:'10',
@@ -35,8 +38,6 @@ function nonary2bts(ns, sep) {
 
   return bt;
 }
-
-console.log(nonary2bts('④③②①jkm01234', '_'));
 
 module.exports = {
   nonary2bts: nonary2bts,

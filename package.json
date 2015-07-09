@@ -17,8 +17,7 @@
   "scripts": {
     "test": "node test.js"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "tape": "^4.0.0"
   }
