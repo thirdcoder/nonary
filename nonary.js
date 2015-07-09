@@ -33,7 +33,7 @@ function nonary2bts(ns, sep) {
     if (!bt_c) throw new Error('nonary2bts('+ns+'): invalid nonary digit: '+c);
 
     bt += bt_c;
-    if (i !== ns.length - 1 ) bt += sep;
+    if (i !== ns.length - 1) bt += sep;
   }
 
   return bt;
