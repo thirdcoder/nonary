@@ -42,14 +42,16 @@ test('bts2nonary', function(t) {
 
 test('nonary2n', function(t) {
   t.equal(nonary2n('abcxyz'), 74165);
+  t.equal(nonary2n('abcd0wxyz'), 54442256);
   t.equal(nonary2n('zzz'), -364);
-  t.equal(nonary2n('wdd'), 121);
+  t.equal(nonary2n('add'), 121);
   t.equal(nonary2n('zz'), -40);
   t.equal(nonary2n('zzzzz'), -29524);
   t.end();
 });
 
 test('n2nonary', function(t) {
+  t.equal(n2nonary(54442256), 'abcd0wxyz');
   t.equal(n2nonary(74165), 'abcxyz');
   t.equal(n2nonary(364), 'ddd');
   t.equal(n2nonary(-121), 'wzz');

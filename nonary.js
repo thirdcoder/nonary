@@ -13,7 +13,7 @@ var NONARY_TO_BTS = {
   z:'ii', m:'ii', '④':'ii', // U+2463 circled digit four
   y:'i0', k:'i0', '③':'i0', // U+2462 circled digit three
   x:'i1', j:'i1', '②':'i1', // U+2461 circled digit two
-  w:'01', i:'0i', '①':'0i', // U+2460 circled digit one
+  w:'0i', i:'0i', '①':'0i', // U+2460 circled digit one
 
   0:'00',
 
