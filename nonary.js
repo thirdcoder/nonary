@@ -1,5 +1,8 @@
 'use strict';
 
+var bts2n = require('balanced-ternary').bts2n;
+var n2bts = require('balanced-ternary').n2bts;
+
 //  ii -4   01 +1
 //  i0 -3   1i +2
 //  i1 -2   10 +3
@@ -70,8 +73,18 @@ function bts2nonary(bt) {
   return ns;
 }
 
+function n2nonary(n) {
+  return bts2nonary(n2bts(n));
+}
+
+function nonary2n(ns) {
+  return bts2n(nonary2bts(ns));
+}
+
 module.exports = {
   nonary2bts: nonary2bts,
   bts2nonary: bts2nonary,
+  n2nonary: n2nonary,
+  nonary2n: nonary2n,
 };
 

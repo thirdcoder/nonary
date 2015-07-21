@@ -17,9 +17,10 @@
   "scripts": {
     "test": "node test.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "balanced-ternary": "*"
+  },
   "devDependencies": {
-    "balanced-ternary": "*",
     "tape": "^4.0.0"
   }
 }

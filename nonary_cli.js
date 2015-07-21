@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 var nonary2bts = require('./').nonary2bts;
 var bts2nonary = require('./').bts2nonary;
+var nonary2n = require('./').nonary2n;
+var n2nonary = require('./').n2nonary;
 var bts2n = require('balanced-ternary').bts2n;
 var n2bts = require('balanced-ternary').n2bts;
 
@@ -26,11 +28,11 @@ process.argv.slice(2).forEach(function(arg) {
   }
 
   if (maybe_nonary(arg)) {
-    console.log(nonary2bts(arg)+' = '+arg+' = '+bts2n(nonary2bts(arg)));
+    console.log(nonary2bts(arg)+' = '+arg+' = '+nonary2n(arg));
   }
 
   if (maybe_n(arg)) {
-    console.log(n2bts(arg)+' = '+bts2nonary(n2bts(arg))+' = '+arg);
+    console.log(n2bts(arg)+' = '+n2nonary(arg)+' = '+arg);
   }
 });
 
