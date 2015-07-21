@@ -1,7 +1,5 @@
 'use strict';
 
-//const {bts2n, n2bts} = require('balanced-ternary');
-
 //  ii -4   01 +1
 //  i0 -3   1i +2
 //  i1 -2   10 +3
