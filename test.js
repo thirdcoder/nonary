@@ -17,6 +17,7 @@ test('nonary2bts', function(t) {
 
   t.equal(nonary2bts('zzzzz'), 'iiiiiiiiii');
   t.equal(nonary2bts('zzzdd'), 'iiiiii1111');
+  t.equal(nonary2bts('zzzdd0'), 'iiiiii111100');
   t.equal(nonary2bts('zzz'), 'iiiiii');
   t.equal(nonary2bts('ddd'), '111111');
 
@@ -31,6 +32,7 @@ test('nonary2bts', function(t) {
 test('bts2nonary', function(t) {
   t.equal(bts2nonary('iiiiiiiiii'), 'zzzzz');
   t.equal(bts2nonary('iiiiii1111'), 'zzzdd');
+  t.equal(bts2nonary('iiiiii111100'), 'zzzdd0');
   t.equal(bts2nonary('0'), '0');
   t.equal(bts2nonary('i'), 'w');
   t.equal(bts2nonary('10'), 'c');
