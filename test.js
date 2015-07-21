@@ -1,8 +1,13 @@
 var test = require('tape');
 var nonary2bts = require('./').nonary2bts;
 var bts2nonary = require('./').bts2nonary;
+var nonary2n = require('./').nonary2n;
+var n2nonary = require('./').n2nonary;
 
 test('nonary2bts', function(t) {
+  t.equal(nonary2bts('zzz'), 'iiiiii');
+  t.equal(nonary2bts('ddd'), '111111');
+
   t.equal(nonary2bts('4'), '11');
   t.equal(nonary2bts('40'), '1100');
   t.equal(nonary2bts('i'), '0i');
@@ -18,5 +23,18 @@ test('bts2nonary', function(t) {
   t.equal(bts2nonary('i1'), 'x');
   t.equal(bts2nonary('i110'), 'xc');
   t.equal(bts2nonary('1i110'), 'axc');
+  t.end();
+});
+
+test('nonary2n', function(t) {
+  t.equal(nonary2n('wdd'), 121);
+  t.equal(nonary2n('zz'), -40);
+  t.end();
+});
+
+test('n2nonary', function(t) {
+  t.equal(n2nonary(-121), 'wzz');
+  t.equal(n2nonary(-29524), 'zzzzz');
+  t.equal(n2nonary(29524), 'ddddd');
   t.end();
 });
