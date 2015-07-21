@@ -8,16 +8,20 @@ function maybe_bts(s) {
   return !!s.match(/^[01i]+$/);
 }
 
+function maybe_nonary(s) {
+  return !!s.match(/^[abcd0wxyz]+$/);
+}
+
 
 process.argv.slice(2).forEach(function(arg) {
-  var ns = nonary2bts(arg);
-
   // ternary -> nonary
-
-  console.log(ns+' = '+arg);
 
   if (maybe_bts(arg)) {
     console.log(arg+' = '+bts2nonary(arg));
+  }
+
+  if (maybe_nonary(arg)) {
+    console.log(nonary2bts(arg)+' = '+arg);
   }
 });
 
