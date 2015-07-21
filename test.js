@@ -13,10 +13,10 @@ test('nonary2bts', function(t) {
 
 test('bts2nonary', function(t) {
   t.equal(bts2nonary('0'), '0');
-  t.equal(bts2nonary('i'), 'i');
-  t.equal(bts2nonary('10'), '3');
-  t.equal(bts2nonary('i1'), 'j');
-  t.equal(bts2nonary('i110'), 'j3');
-  t.equal(bts2nonary('1i110'), '1j3');
+  t.equal(bts2nonary('i'), 'w');
+  t.equal(bts2nonary('10'), 'c');
+  t.equal(bts2nonary('i1'), 'x');
+  t.equal(bts2nonary('i110'), 'xc');
+  t.equal(bts2nonary('1i110'), 'axc');
   t.end();
 });
