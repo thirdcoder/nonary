@@ -2,6 +2,9 @@
 
 Base 9, [nonary](https://en.wikipedia.org/wiki/Nonary), conversions, to/from balanced ternary (2-trit groups) and integers
 
+[![Build Status](https://travis-ci.org/thirdcoder/nonary.svg?branch=master)](https://travis-ci.org/thirdcoder/nonary)
+[![npm version](https://badge.fury.io/js/nonary.svg)](https://www.npmjs.com/package/nonary)
+
 Usage:
 
     var nonary2n = require('nonary').nonary2n;
