@@ -7,16 +7,18 @@ Base 9, [nonary](https://en.wikipedia.org/wiki/Nonary), conversions, to/from bal
 
 Usage:
 
-    var nonary2n = require('nonary').nonary2n;
-    var n2nonary = require('nonary').n2nonary;
-    var nonary2bts = require('nonary').nonary2bts;
-    var bts2nonary = require('nonary').bts2nonary;
+```js
+var nonary2n = require('nonary').nonary2n;
+var n2nonary = require('nonary').n2nonary;
+var nonary2bts = require('nonary').nonary2bts;
+var bts2nonary = require('nonary').bts2nonary;
 
-    n2nonary(-29524);   // 'zzzzz'
-    nonary2n('zzzzz');  // -29524
+n2nonary(-29524);   // 'zzzzz'
+nonary2n('zzzzz');  // -29524
 
-    bts2nonary('iiiiii111100');   // 'zzzdd0'
-    nonary2bts('zzzdd0');         // 'iiiiii111100'
+bts2nonary('iiiiii111100');   // 'zzzdd0'
+nonary2bts('zzzdd0');         // 'iiiiii111100'
+```
 
 Digit values 0, +1, +2, +3, +4, -1, -2, -3, and -4 correspond to nonary digits a, b, c, d, 0, w, x, y, and z,
 and balanced ternary 00, 01, 1i, 10, 11, 0i, i1, i0, and ii.
